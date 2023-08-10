@@ -1,0 +1,7 @@
+button {
+   border: none;
+   border-radius: 5px;
+   padding-inline: 35px;
+   padding-block: 15px;
+   height: fit-content;
+}
