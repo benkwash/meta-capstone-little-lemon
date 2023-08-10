@@ -1,0 +1,135 @@
+.section-container {
+   /* padding: auto; */
+}
+.section-layout {
+   margin: auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   width: 100%;
+   max-width: 1000px;
+}
+
+.section-layout > div {
+   width: 100%;
+   margin: auto;
+   grid-column: auto / span 4;
+}
+.col {
+   height: 100%;
+}
+.section-layout > div {
+   --col2: auto / span 2;
+   --col3: auto / span 3;
+   --col4: auto / span 4;
+   --col5: auto / span 5;
+   --col6: auto / span 6;
+   --col7: auto / span 7;
+   --col8: auto / span 8;
+   /* --col9: 1 / span 9;
+   --col10: 1 / span 10; */
+   /* --col11: 1 / span 11;
+   --col12: 1 / span 12; */
+}
+.section-layout > div.sm-col-2 {
+   grid-column: var(--col2);
+}
+.section-layout > div.sm-col-3 {
+   grid-column: var(--col3);
+}
+.section-layout > div.sm-col-4 {
+   grid-column: var(--col4);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+   .section-layout {
+      grid-template-columns: repeat(8, 1fr);
+   }
+
+   .section-layout > div {
+      grid-column: auto / span 8;
+   }
+
+   .section-layout > div.m-col-2 {
+      grid-column: var(--col2);
+   }
+   .section-layout > div.m-col-3 {
+      grid-column: var(--col3);
+   }
+   .section-layout > div.m-col-4 {
+      grid-column: var(--col4);
+   }
+   .section-layout > div.m-col-5 {
+      grid-column: var(--col5);
+   }
+   .section-layout > div.m-col-6 {
+      grid-column: var(--col6);
+   }
+   .section-layout > div.m-col-7 {
+      grid-column: var(--col7);
+   }
+   .section-layout > div.m-col-8 {
+      grid-column: var(--col8);
+   }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   .section-layout {
+      grid-template-columns: repeat(8, 1fr);
+   }
+
+   .section-layout > div {
+      grid-column: auto / span 8;
+   }
+
+   .section-layout > div.l-col-2 {
+      grid-column: auto / span 2;
+   }
+   .section-layout > div.l-col-3 {
+      grid-column: auto / span 3;
+   }
+   .section-layout > div.l-col-4 {
+      grid-column: auto / span 4;
+   }
+   .section-layout > div.l-col-5 {
+      grid-column: auto / span 5;
+   }
+   .section-layout > div.l-col-6 {
+      grid-column: auto / span 6;
+   }
+   .section-layout > div.l-col-7 {
+      grid-column: auto / span 7;
+   }
+   .section-layout > div.l-col-8 {
+      grid-column: auto / span 8;
+   }
+   .section-layout > div.l-col-9 {
+      grid-column: auto / span 8;
+   }
+   .section-layout > div.l-col-10 {
+      grid-column: auto / span 8;
+   }
+   .section-layout > div.l-col-11 {
+      grid-column: auto / span 8;
+   }
+   .section-layout > div.l-col-12 {
+      grid-column: auto / span 8;
+   }
+
+   /* .section-layout > div:first-child {
+      grid-column-start: 3;
+   } */
+
+   /* .section-layout > div:last-child {
+      grid-column-start: auto;
+      grid-column-end: 11;
+   } */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+} */
