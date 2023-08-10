@@ -1,0 +1,38 @@
+.special-item {
+   width: 100%;
+   margin-top: 50px;
+   margin-inline: 10px;
+}
+.special-item,
+.special-item > img {
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+}
+.special-item img {
+   width: 100%;
+   aspect-ratio: 1/0.7;
+   object-fit: cover;
+}
+
+.special-item > div {
+   padding: 20px;
+}
+.special-item-head {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 30px;
+}
+.text-card-description {
+   height: 100px;
+}
+
+.special-item > div h5 {
+   margin-top: 40px;
+   margin-bottom: 10px;
+}
+.special-item-footer span {
+   margin-left: 20px;
+}
+.special-item-footer img {
+   width: 15px;
+}

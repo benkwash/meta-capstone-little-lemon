@@ -1,0 +1,43 @@
+.hero-section {
+   --margin-offset: 30px;
+}
+
+.hero-section::after {
+   display: block;
+   content: '';
+   width: 100vw;
+   height: var(--margin-offset);
+}
+.hero-section-left {
+   position: relative;
+   height: calc(100% - var(--margin-offset));
+   padding-top: 40px;
+}
+
+.hero-section button {
+   margin-top: 50px;
+}
+
+.hero-section-left h2 {
+   margin-top: 10px;
+}
+.hero-section-left p {
+   margin-top: 30px;
+}
+
+.hero-image-container {
+   position: relative;
+   padding: 30px;
+   min-height: 430px;
+   max-height: 100%;
+}
+.hero-image {
+   width: calc(100% - 60px);
+   min-height: 430px;
+   max-height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+   border: 1px solid #333333;
+   position: absolute;
+   top: var(--margin-offset);
+}

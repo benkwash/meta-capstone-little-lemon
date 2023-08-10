@@ -1,0 +1,25 @@
+.specials-container {
+   padding-top: 30px;
+}
+.all-specials-container,
+.specials-header-container {
+   display: flex;
+   align-items: center;
+}
+
+.specials-header-container {
+   justify-content: space-between;
+}
+.all-specials-container {
+   /* padding-inline: 10px; */
+   flex-direction: row;
+   /* flex-wrap: wrap; */
+   /* flex-flow: row wrap; */
+   flex: 1 1 400px;
+   align-items: center;
+   justify-content: left;
+}
+
+.all-specials-container > * {
+   /* flex-basis: auto; */
+}
