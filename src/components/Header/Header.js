@@ -1,6 +1,7 @@
 import logo from '../../assets/logo.svg';
 import './Header.css';
 import { Row, Column } from '../SectionLayout';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
    return (
@@ -12,34 +13,43 @@ const Header = () => {
                   <nav>
                      <ul className="text-menu no-list-style">
                         <li>
-                           <a href="" className="color-secondary-dark">
+                           <Link
+                              to={'/homepage'}
+                              className="color-secondary-dark"
+                           >
                               HOME
-                           </a>
+                           </Link>
                         </li>
                         <li>
-                           <a href="" className="color-secondary-dark">
+                           <Link to={'#about'} className="color-secondary-dark">
                               ABOUT
-                           </a>
+                           </Link>
                         </li>
                         <li>
-                           <a href="" className="color-secondary-dark">
+                           <Link to={'#menu'} className="color-secondary-dark">
                               MENU
-                           </a>
+                           </Link>
                         </li>
                         <li>
-                           <a href="" className="color-secondary-dark">
+                           <Link
+                              to={'/booking'}
+                              className="color-secondary-dark"
+                           >
                               RESERVATIONS
-                           </a>
+                           </Link>
                         </li>
                         <li>
-                           <a href="" className="color-secondary-dark">
+                           <Link
+                              to={'#order-online'}
+                              className="color-secondary-dark"
+                           >
                               ORDER ONLINE
-                           </a>
+                           </Link>
                         </li>
                         <li>
-                           <a href="" className="color-secondary-dark">
+                           <Link to={'#login'} className="color-secondary-dark">
                               LOGIN
-                           </a>
+                           </Link>
                         </li>
                      </ul>
                   </nav>
