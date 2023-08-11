@@ -2,6 +2,63 @@ import './Footer.css';
 import restaurantImage from '../../assets/restaurant-1.jpg';
 import { Row, Column } from '../SectionLayout';
 import { colors } from '../../utils';
+import FooterLinks from './FooterLinks';
+
+const footerLinksDetails = [
+   {
+      title: 'Doormat Navigation',
+      links: [
+         { name: 'Home', link: 'home' },
+         { name: 'About', link: 'about' },
+         { name: 'Menu', link: 'menu' },
+         { name: 'Reservations', link: 'reservations' },
+         { name: 'Order Online', link: 'order-online' }
+      ]
+   },
+   {
+      title: 'Contact Us',
+      links: [
+         { name: 'Address: Accra', link: 'Accra', type: 'text' },
+         { name: 'Phone: +233268462240', link: '+233268462240', type: 'phone' },
+         {
+            name: 'Email: little-lemon@gmail.com',
+            link: 'little-lemon@gmail.com',
+            type: 'email'
+         }
+      ]
+   },
+   {
+      title: 'Social Media Links',
+      links: [
+         {
+            name: 'Facebook',
+            link: 'https://faceboook.com/benkwash',
+            external: true
+         },
+         {
+            name: 'Twitter',
+            link: 'https://twitter.com/benkwash',
+            external: true
+         },
+         {
+            name: 'Instagram',
+            link: 'https://instagram.com/benkwash',
+            external: true
+         },
+         {
+            name: 'Youtube',
+            link: 'https://youtube.com/benkwash',
+            external: true
+         }
+      ]
+   }
+];
+const footerLinks = () =>
+   footerLinksDetails.map((links, index) => (
+      <Column key={`${index}-${links.title}`} className="l-col-2 m-col-2">
+         <FooterLinks {...links} />
+      </Column>
+   ));
 const Footer = () => {
    return (
       <footer>
@@ -13,66 +70,7 @@ const Footer = () => {
                   className="footer-image"
                />
             </Column>
-            <Column className="l-col-2 m-col-2">
-               <div>
-                  <h3>Doormat Navigation</h3>
-                  <ul>
-                     <li>
-                        <a href="home">Home</a>
-                     </li>
-                     <li>
-                        <a href="about">About</a>
-                     </li>
-                     <li>
-                        <a href="menu">Menu</a>
-                     </li>
-                     <li>
-                        <a href="reservations">Reservations</a>
-                     </li>
-                     <li>
-                        <a href="order">Order Online</a>
-                     </li>
-                     <li>
-                        <a href="login">Login</a>
-                     </li>
-                  </ul>
-               </div>
-            </Column>
-            <Column className="l-col-2 m-col-2">
-               <div>
-                  <h3>Contact</h3>
-                  <ul>
-                     <li>
-                        <a href="address">Address</a>
-                     </li>
-                     <li>
-                        <a href="phone-number">Phone Number</a>
-                     </li>
-                     <li>
-                        <a href="email">Email</a>
-                     </li>
-                  </ul>
-               </div>
-            </Column>
-            <Column className="l-col-2 m-col-2">
-               <div>
-                  <h3>Social Media Links</h3>
-                  <ul>
-                     <li>
-                        <a href="facebook">Facebook</a>
-                     </li>
-                     <li>
-                        <a href="twitter">Twitter</a>
-                     </li>
-                     <li>
-                        <a href="instagram">Instagram</a>
-                     </li>
-                     <li>
-                        <a href="youtube">Youtube</a>
-                     </li>
-                  </ul>
-               </div>
-            </Column>
+            {footerLinks()}
          </Row>
       </footer>
    );

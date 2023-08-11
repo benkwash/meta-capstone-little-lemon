@@ -10,7 +10,7 @@ const Header = () => {
                <div className="navigation">
                   <img src={logo} alt="little lemon logo" />
                   <nav>
-                     <ul className="text-menu">
+                     <ul className="text-menu no-list-style">
                         <li>
                            <a href="" className="color-secondary-dark">
                               HOME

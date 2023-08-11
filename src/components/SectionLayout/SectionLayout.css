@@ -1,5 +1,5 @@
 .section-container {
-   /* padding: auto; */
+   padding-inline: 20px;
 }
 .section-layout {
    margin: auto;
@@ -42,6 +42,9 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 991px) {
+   .section-container {
+      padding-inline: 10px;
+   }
    .section-layout {
       grid-template-columns: repeat(8, 1fr);
    }
@@ -78,6 +81,9 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+   .section-container {
+      padding-inline: 0;
+   }
    .section-layout {
       grid-template-columns: repeat(8, 1fr);
    }
